@@ -61,16 +61,22 @@ object PathTransition extends AnimationStatics {
 
     /**
      * The targeted node's rotation matrix stays unchanged along the geometric path.
+     *
+     * @note Do not confuse with [[scala.Option.None]].
      */
-    val NONE = new OrientationType(jfxa.PathTransition.OrientationType.NONE)
+    val None = new OrientationType(jfxa.PathTransition.OrientationType.NONE)
+    @deprecated ("Use None; NONE will be removed in a future releas", "8.0.5")
+    val NONE = None
 
     /**
      * The targeted node's rotation matrix is set to keep node perpendicular to the path's tangent along the geometric
      * path.
      */
-    val ORTHOGONAL_TO_TANGENT = new OrientationType(jfxa.PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT)
+    val OrthogonalToTangent = new OrientationType(jfxa.PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT)
+    @deprecated ("Use OrthogonalToTangent; ORTHOGONAL_TO_TANGENT will be removed in a future releas", "8.0.5")
+    val ORTHOGONAL_TO_TANGENT = OrthogonalToTangent
 
-    protected override def unsortedValues: Array[OrientationType] = Array(NONE, ORTHOGONAL_TO_TANGENT)
+    protected override def unsortedValues: Array[OrientationType] = Array(None, OrthogonalToTangent)
 
   }
 
