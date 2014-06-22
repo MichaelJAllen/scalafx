@@ -65,7 +65,7 @@ object PathTransition extends AnimationStatics {
      * @note Do not confuse with [[scala.Option.None]].
      */
     val None = new OrientationType(jfxa.PathTransition.OrientationType.NONE)
-    @deprecated ("Use None; NONE will be removed in a future releas", "8.0.5")
+    @deprecated ("Use None; NONE will be removed in a future releas", "2.2.60")
     val NONE = None
 
     /**
@@ -73,7 +73,7 @@ object PathTransition extends AnimationStatics {
      * path.
      */
     val OrthogonalToTangent = new OrientationType(jfxa.PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT)
-    @deprecated ("Use OrthogonalToTangent; ORTHOGONAL_TO_TANGENT will be removed in a future releas", "8.0.5")
+    @deprecated ("Use OrthogonalToTangent; ORTHOGONAL_TO_TANGENT will be removed in a future releas", "2.2.60")
     val ORTHOGONAL_TO_TANGENT = OrthogonalToTangent
 
     protected override def unsortedValues: Array[OrientationType] = Array(None, OrthogonalToTangent)
